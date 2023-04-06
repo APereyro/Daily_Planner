@@ -21,9 +21,9 @@ $(function () {
     const userInput = localStorage.getItem(timeBlockId);
     $(this).find('.description').val(userInput);
   });
-  const currentDate = dayjs().format('dddd, MMMM D');
-  $('#currentDay').text(currentDate);
-  
+  const currentDate = dayjs().format('dddd, MMMM D, h:mm A');
+$('#currentDay').text(currentDate);
+
   $('.description').on('blur', function() {
     const userInput = $(this).val().trim();
     if (!userInput) {
